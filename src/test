@@ -1,1 +1,13 @@
 https://stackoverflow.com/questions/46049009/qt-get-mouse-clicked-position-relative-to-image-in-a-graphics-view
+
+
+
+
+https://stackoverflow.com/questions/57233845/take-screenshot-with-qt-c
+QScreen *screen;
+QPixmap qpx_pixmap;
+
+screen = QGuiApplication::primaryScreen();
+qpx_pixmap = screen->grabWindow(0);
+screenshotTarget = dir.path() + "/" + QDateTime::currentDateTime().toString("dddd hh:mm:ss");
+qpx_pixmap.save(screenshotTarget);
